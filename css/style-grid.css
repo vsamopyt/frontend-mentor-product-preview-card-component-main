@@ -56,14 +56,14 @@ body {
 
 main {
     width:580px;
-    height:430px;
+    height:435px;
 
 }
 
 .even-columns {
     height:100%;
-    display: flex;
-   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .card-pictre {
@@ -153,22 +153,29 @@ main {
         width:339px;
         height:100%
     }
-    .even-columns {
-        display: flex;
-        flex-direction: column;
+     .even-columns {
+        height:100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 4.5fr 8fr;
+        align-items: end;
+        
+      
     }
-
     .card-pictre {
+        height:100%; 
         background-image: url(../images/image-product-mobile.jpg);
-        background-size: cover; 
-        border-radius: 0;
-        border-top-left-radius: var(--radius-boreder);
-        border-top-right-radius: var(--radius-boreder);
+         background-size: cover; 
+         background-repeat:no-repeat;
+         border-radius: 0;
+         border-top-left-radius: var(--radius-boreder);
+         border-top-right-radius: var(--radius-boreder);
        
     }
 
     .card-text {
         padding: 1.4rem;
+        background-color: var(--clr-neutal-200);
         border-radius: 0;
         border-bottom-left-radius: var(--radius-boreder);
         border-bottom-right-radius: var(--radius-boreder)

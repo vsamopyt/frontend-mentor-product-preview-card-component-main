@@ -6,6 +6,7 @@
     --clr-neutral-700: hsl(228, 12%, 48%);
     --clr-neutral-900:hsl(212, 21%, 14%);
    
+    --fs-200:0.75rem;
     --fs-300:0.875rem;
     --fs-400:1rem;
     --fs-450:1.1rem;
@@ -62,23 +63,28 @@ main {
 
 .even-columns {
     height:100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    /* flex-direction: row; */
+   
 }
 
 .card-pictre {
+    width: 50%;
     height:100%;
     background-image: url(../images/image-product-desktop.jpg);
     background-size: cover;
     border-top-left-radius: var(--radius-boreder);
     border-bottom-left-radius: var(--radius-boreder);
+  
 }
 
 .card-text {
+    width: 50%;
     padding: 1.9rem;
     background-color: var(--clr-neutal-200);
     border-top-right-radius: var(--radius-boreder);
     border-bottom-right-radius: var(--radius-boreder);
+   
 }
 
 .card-tag {
@@ -151,35 +157,45 @@ main {
 @media (max-width: 590px) {
     main {
         width:339px;
-        height:100%
-    }
-     .even-columns {
-        height:100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 4.5fr 8fr;
-        align-items: end;
-        
-      
-    }
-    .card-pictre {
-        height:100%; 
-        background-image: url(../images/image-product-mobile.jpg);
-         background-size: cover; 
-         background-repeat:no-repeat;
-         border-radius: 0;
-         border-top-left-radius: var(--radius-boreder);
-         border-top-right-radius: var(--radius-boreder);
+        height:612px;
        
+    }
+    .even-columns {
+        height:100%;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-pictre {
+        width:100%;
+        height: 100%;
+        background-image: url(../images/image-product-mobile.jpg);
+        background-size: cover; 
+        border-radius: 0;
+        border-top-left-radius: var(--radius-boreder);
+        border-top-right-radius: var(--radius-boreder);
     }
 
     .card-text {
+        width:100%;
+        height:100%;
         padding: 1.4rem;
-        background-color: var(--clr-neutal-200);
         border-radius: 0;
         border-bottom-left-radius: var(--radius-boreder);
-        border-bottom-right-radius: var(--radius-boreder)
-        
+        border-bottom-right-radius: var(--radius-boreder);  
     }
 
+    .card-tag {
+        font-size: var(--fs-200);
+    }
+
+    .card-desc {
+        margin: 1rem 0 1.2rem 0;
+    }
+
+    .conteiner-price {
+        margin-bottom: 0.5rem;
+    }
+    
 } 
